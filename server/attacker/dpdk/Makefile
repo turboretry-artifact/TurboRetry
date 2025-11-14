@@ -7,10 +7,8 @@ short: clean
 release: clean
 	meson setup ./build --buildtype release && ninja -C build
 
-# 运行目标
 run:
 	sudo ./build/dpdk_qia $(pps) $(duration)
 
-# 清理目标
 clean:
 	-rm -rf build
